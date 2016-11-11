@@ -1,0 +1,19 @@
+{
+  "name": "fmi-js",
+  "version": "0.0.1",
+  "description": "Simple utility for fetching weather data in JSON format using FMI open data",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjpohja/fmi-js.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjpohja/fmi-js/issues"
+  },
+  "homepage": "https://github.com/mjpohja/fmi-js#readme"
+}
