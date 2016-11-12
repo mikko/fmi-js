@@ -4,7 +4,9 @@
   "description": "Simple utility for fetching weather data in JSON format using FMI open data",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "node ./node_modules/eslint/bin/eslint.js **/*.js || true",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/mjpohja/fmi-js/issues"
   },
-  "homepage": "https://github.com/mjpohja/fmi-js#readme"
+  "homepage": "https://github.com/mjpohja/fmi-js#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "lodash": "^4.16.6",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0"
+  }
 }
