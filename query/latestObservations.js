@@ -1,6 +1,6 @@
 const fmiRequest = require('../lib/fmiRequest');
 
-const queryId = 'fmi::forecast::hirlam::surface::point::simple';
+const queryId = 'fmi::observations::weather::simple';
 exports.queryId = queryId;
 exports.params = ['place'];
 
