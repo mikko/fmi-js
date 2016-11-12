@@ -4,7 +4,7 @@ const queryId = 'describeStoredQueries';
 exports.queryId = queryId;
 
 exports.run = function runQuery() {
-  console.log(`${baseUrl}${apiKey}/wfs?require=${queryId}`);
-  fmiRequest.get(queryId)
-  return 'KUKKUU';
+  return fmiRequest.get(queryId)
+    .then(results => Promise.resolve(results))
+    .catch(err => console.log(err));
 };
