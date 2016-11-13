@@ -3,7 +3,7 @@
 
 ## GetDataSetById
 
-`__GetDataSetById__`
+`GetDataSetById`
 
 GetDataSetById returns INSPIRE data sets. Consult catalog.fmi.fi to investigate possible data sets.
 ### Parameters
@@ -18,7 +18,7 @@ GetDataSetById returns INSPIRE data sets. Consult catalog.fmi.fi to investigate 
 
 ## Aviation weather from aerodromes in Finland
 
-`__fmi::avi::observations::finland::iwxxm__`
+`fmi::avi::observations::finland::iwxxm`
 
 This stored query return aviation weather messages from the essential aerodromes in Finland (predefined aerodrome set). Each message is constructed from a METAR weather report and converted to IWXXM (ICAO Meteorological Information Exchange Model) format. By default, the data is returned from the last 60 minutes. One can change the time range by using starttime and endtime parameters. It is also possible to request additional aerodromes which are included into the predefined aerodrome set by using icaocode parameter (duplicates are iqnored).
 ### Parameters
@@ -35,7 +35,7 @@ This stored query return aviation weather messages from the essential aerodromes
 
 ## Aviation weather from aerodromes in Finland
 
-`__fmi::avi::observations::finland::latest::iwxxm__`
+`fmi::avi::observations::finland::latest::iwxxm`
 
 This stored query return the latest aviation weather messages (one per aerodrome) from the essential aerodromes in Finland (predefined aerodrome set). Each message is constructed from a METAR weather report and converted to IWXXM (ICAO Meteorological Information Exchange Model) format. By default, the latest messages are searched from the last 24 hours. One can change the time range by using starttime and endtime parameters. It is also possible to request additional aerodromes which are included into the predefined aerodrome set by using icaocode parameter (duplicates are ignored).
 ### Parameters
@@ -52,7 +52,7 @@ This stored query return the latest aviation weather messages (one per aerodrome
 
 ## Aviation weather from aerodromes
 
-`__fmi::avi::observations::iwxxm__`
+`fmi::avi::observations::iwxxm`
 
 This stored query return aviation weather messages. Each message is constructed from a METAR weather report and converted to IWXXM (ICAO Meteorological Information Exchange Model) format. By default, the data is returned from the 60 minutes. One can change the time range by using starttime and endtime parameters. At least one location parameter (icaocode, bbox, geoid) must be given to get non zero result.
 ### Parameters
@@ -71,7 +71,7 @@ This stored query return aviation weather messages. Each message is constructed 
 
 ## Aviation weather from aerodromes
 
-`__fmi::avi::observations::latest::iwxxm__`
+`fmi::avi::observations::latest::iwxxm`
 
 This stored query return the latest aviation weather messages from aerodromes. Each message is constructed from a METAR weather report and converted to IWXXM (ICAO Meteorological Information Exchange Model) format. By default, the latest message is searched from the last 24 hours. One can change the time range by using starttime and endtime parameters. At least one location parameter (icaocode, bbox, geoid) must be given to get non zero result.
 ### Parameters
@@ -90,7 +90,7 @@ This stored query return the latest aviation weather messages from aerodromes. E
 
 ## Climate Scenarios
 
-`__fmi::forecast::climatology::scenario::grid__`
+`fmi::forecast::climatology::scenario::grid`
 
 Mean temperature and precipitation amount scenarios for three periods of thirty years. The data contains 10x10km grid and is returned in GRIB format.
 ### Parameters
@@ -108,7 +108,7 @@ Mean temperature and precipitation amount scenarios for three periods of thirty 
 
 ## HBM Current Model Grid
 
-`__fmi::forecast::hbm::grid__`
+`fmi::forecast::hbm::grid`
 
 HBM forecast model provides sea currents and water temperature forecast as grid data encoded in GRIB format.
 ### Parameters
@@ -128,7 +128,7 @@ HBM forecast model provides sea currents and water temperature forecast as grid 
 
 ## HBM Current Model Point
 
-`__fmi::forecast::hbm::point::multipointcoverage__`
+`fmi::forecast::hbm::point::multipointcoverage`
 
 HBM forecast model provides sea currents and water temperature forecast. This stored query provides the data as point data encoded in multi point coverage format.
 ### Parameters
@@ -149,7 +149,7 @@ HBM forecast model provides sea currents and water temperature forecast. This st
 
 ## HBM Current Model Point
 
-`__fmi::forecast::hbm::point::simple__`
+`fmi::forecast::hbm::point::simple`
 
 HBM forecast model provides sea currents and water temperature forecast. This stored query provides the data as point data encoded in simple feature format.
 ### Parameters
@@ -170,7 +170,7 @@ HBM forecast model provides sea currents and water temperature forecast. This st
 
 ## HBM Current Model Point
 
-`__fmi::forecast::hbm::point::timevaluepair__`
+`fmi::forecast::hbm::point::timevaluepair`
 
 HBM forecast model provides sea currents and water temperature forecast. This stored query provides the data as point data encoded in time value pair format.
 ### Parameters
@@ -192,7 +192,7 @@ HBM forecast model provides sea currents and water temperature forecast. This st
 
 ## Helsinki multi-category ice model as a grid.
 
-`__fmi::forecast::helmi::grid__`
+`fmi::forecast::helmi::grid`
 
 This Stored Query request retrieve Helsinki multi-category ice model forecast raw dataset as a grid.
 ### Parameters
@@ -212,7 +212,7 @@ This Stored Query request retrieve Helsinki multi-category ice model forecast ra
 
 ## Hirlam Pressure Grid
 
-`__fmi::forecast::hirlam::pressure::grid__`
+`fmi::forecast::hirlam::pressure::grid`
 
 Hirlam forecast model's pressure levels as a grid data encoded in GRIB format.
 ### Parameters
@@ -232,7 +232,7 @@ Hirlam forecast model's pressure levels as a grid data encoded in GRIB format.
 
 ## Hirlam weather forecast for cities in Finland as multipointcoverage
 
-`__fmi::forecast::hirlam::surface::cities::multipointcoverage__`
+`fmi::forecast::hirlam::surface::cities::multipointcoverage`
 
 This stored query fetch Hirlam weather forecast for cities in Finland. The forcast is returned in multi point coverage format. By default, forcast is returned for the next 36 hours.
 ### Parameters
@@ -251,7 +251,7 @@ This stored query fetch Hirlam weather forecast for cities in Finland. The forca
 
 ## Hirlam weather forecast for cities in Finland as simple features
 
-`__fmi::forecast::hirlam::surface::cities::simple__`
+`fmi::forecast::hirlam::surface::cities::simple`
 
 This stored query fetch Hirlam weather forecast for cities in Finland. The forcast is returned in simple feature format. By default, forcast is returned for the next 36 hours.
 ### Parameters
@@ -270,7 +270,7 @@ This stored query fetch Hirlam weather forecast for cities in Finland. The forca
 
 ## Hirlam weather forecast for cities in Finland as time value pairs
 
-`__fmi::forecast::hirlam::surface::cities::timevaluepair__`
+`fmi::forecast::hirlam::surface::cities::timevaluepair`
 
 This stored query fetch Hirlam weather forecast for cities in Finland. The forcast is returned as time value pairs. By default, forcast is returned for the next 36 hours.
 ### Parameters
@@ -289,7 +289,7 @@ This stored query fetch Hirlam weather forecast for cities in Finland. The forca
 
 ## Hirlam surface level weather forecast for Finland as a grid.
 
-`__fmi::forecast::hirlam::surface::finland::grid__`
+`fmi::forecast::hirlam::surface::finland::grid`
 
 This Stored Query request retrieve Hirlam surface level forecast raw dataset as a grid for Finland region.
 ### Parameters
@@ -309,7 +309,7 @@ This Stored Query request retrieve Hirlam surface level forecast raw dataset as 
 
 ## Hirlam Surface Grid
 
-`__fmi::forecast::hirlam::surface::grid__`
+`fmi::forecast::hirlam::surface::grid`
 
 Hirlam forecast model's surface level as grid data encoded in GRIB format.
 ### Parameters
@@ -328,7 +328,7 @@ Hirlam forecast model's surface level as grid data encoded in GRIB format.
 
 ## Hirlam weather forecast for observation stations as multipointcoverage.
 
-`__fmi::forecast::hirlam::surface::obsstations::multipointcoverage__`
+`fmi::forecast::hirlam::surface::obsstations::multipointcoverage`
 
 This stored query fetch Hirlam weather forecast for observation stations in Finland. The forcast is returned as multipointcoverage form. By default, forecast is returned for the next 36 hours.
 ### Parameters
@@ -346,7 +346,7 @@ This stored query fetch Hirlam weather forecast for observation stations in Finl
 
 ## Hirlam weather forecast for observation stations as simple feature.
 
-`__fmi::forecast::hirlam::surface::obsstations::simple__`
+`fmi::forecast::hirlam::surface::obsstations::simple`
 
 This stored query fetch Hirlam weather forecast for observation stations in Finland. The forcast is returned as simple feature form. By default, forecast is returned for the next 36 hours.
 ### Parameters
@@ -364,7 +364,7 @@ This stored query fetch Hirlam weather forecast for observation stations in Finl
 
 ## Hirlam weather forecast for observation stations as time value pairs.
 
-`__fmi::forecast::hirlam::surface::obsstations::timevaluepair__`
+`fmi::forecast::hirlam::surface::obsstations::timevaluepair`
 
 This stored query fetch Hirlam weather forecast for observation stations in Finland. The forcast is returned as time value pairs. By default, forecast is returned for the next 36 hours.
 ### Parameters
@@ -383,7 +383,7 @@ This stored query fetch Hirlam weather forecast for observation stations in Finl
 
 ## Hirlam Point Weather Forecast as multipointcoverage
 
-`__fmi::forecast::hirlam::surface::point::multipointcoverage__`
+`fmi::forecast::hirlam::surface::point::multipointcoverage`
 
 Hirlam weather forecast fetched to a specific location returned in multi point coverage format. Location need to be specified as place or geoid or latlon query parameters.
 ### Parameters
@@ -405,7 +405,7 @@ Hirlam weather forecast fetched to a specific location returned in multi point c
 
 ## Hirlam Point Weather Forecast as simple features
 
-`__fmi::forecast::hirlam::surface::point::simple__`
+`fmi::forecast::hirlam::surface::point::simple`
 
 Hirlam weather forecast fetched to a specific location returned in simple feature format. Location need to be specified as place or geoid or latlon query parameters.
 ### Parameters
@@ -427,7 +427,7 @@ Hirlam weather forecast fetched to a specific location returned in simple featur
 
 ## Hirlam Point Weather Forecast as time value pairs
 
-`__fmi::forecast::hirlam::surface::point::timevaluepair__`
+`fmi::forecast::hirlam::surface::point::timevaluepair`
 
 Hirlam weather forecast fetched to a specific location returned in time value pair format. Location need to be specified as place or geoid or latlon query parameters.
 ### Parameters
@@ -450,7 +450,7 @@ Hirlam weather forecast fetched to a specific location returned in time value pa
 
 ## OAAS Sea Level Model Point
 
-`__fmi::forecast::oaas::sealevel::point::multipointcoverage__`
+`fmi::forecast::oaas::sealevel::point::multipointcoverage`
 
 OAAS forecast model provides sea level height forecast to points. This stored query provides point data encoded in multi point coverage format.
 ### Parameters
@@ -470,7 +470,7 @@ OAAS forecast model provides sea level height forecast to points. This stored qu
 
 ## OAAS Sea Level Model Point
 
-`__fmi::forecast::oaas::sealevel::point::simple__`
+`fmi::forecast::oaas::sealevel::point::simple`
 
 OAAS forecast model provides sea level height forecast to points. This stored query provides point data encoded in simple feature format.
 ### Parameters
@@ -490,7 +490,7 @@ OAAS forecast model provides sea level height forecast to points. This stored qu
 
 ## OAAS Sea Level Model Point
 
-`__fmi::forecast::oaas::sealevel::point::timevaluepair__`
+`fmi::forecast::oaas::sealevel::point::timevaluepair`
 
 OAAS forecast model provides sea level height forecast to points. This stored query provides point data encoded in time value pair format.
 ### Parameters
@@ -511,7 +511,7 @@ OAAS forecast model provides sea level height forecast to points. This stored qu
 
 ## WAM Wave Model Grid
 
-`__fmi::forecast::wam::grid__`
+`fmi::forecast::wam::grid`
 
 WAM forecast model provides wave height forecast as grid data encoded in GRIB format.
 ### Parameters
@@ -529,7 +529,7 @@ WAM forecast model provides wave height forecast as grid data encoded in GRIB fo
 
 ## WAM Wave Model Point
 
-`__fmi::forecast::wam::point::multipointcoverage__`
+`fmi::forecast::wam::point::multipointcoverage`
 
 WAM forecast model provides wave height forecast. This stored query provides point data encoded in multi point coverage format.
 ### Parameters
@@ -550,7 +550,7 @@ WAM forecast model provides wave height forecast. This stored query provides poi
 
 ## WAM Wave Model Point
 
-`__fmi::forecast::wam::point::simple__`
+`fmi::forecast::wam::point::simple`
 
 WAM forecast model provides wave height forecast. This stored query provides point data encoded in simple feature format.
 ### Parameters
@@ -571,7 +571,7 @@ WAM forecast model provides wave height forecast. This stored query provides poi
 
 ## WAM Wave Model Point
 
-`__fmi::forecast::wam::point::timevaluepair__`
+`fmi::forecast::wam::point::timevaluepair`
 
 WAM forecast model provides wave height forecast. This stored query provides point data encoded in time value pair format. Location has to be specified as geoid or latlon-coordinates.
 ### Parameters
@@ -593,7 +593,7 @@ WAM forecast model provides wave height forecast. This stored query provides poi
 
 ## Hourly Air Quality Observations
 
-`__fmi::observations::airquality::hourly::multipointcoverage__`
+`fmi::observations::airquality::hourly::multipointcoverage`
 
 Hourly air quality observations from weather stations of Finnish Meteorological Institute. By default, all the station are selected and the data is returned from the last 24 hours. The data is returned as multi point coverage format.
 ### Parameters
@@ -617,7 +617,7 @@ Hourly air quality observations from weather stations of Finnish Meteorological 
 
 ## Hourly Air Quality Observations
 
-`__fmi::observations::airquality::hourly::simple__`
+`fmi::observations::airquality::hourly::simple`
 
 Hourly air quality observations from weather stations or Finnish Meteorological Institute. By default, all the station are selected and the data is returned from the last 24 hours. The data is returned as a simple feature format.
 ### Parameters
@@ -642,7 +642,7 @@ Hourly air quality observations from weather stations or Finnish Meteorological 
 
 ## Hourly Air Quality Observations
 
-`__fmi::observations::airquality::hourly::timevaluepair__`
+`fmi::observations::airquality::hourly::timevaluepair`
 
 Hourly air quality observations from weather stations of Finnish Meteorological Institute. By default, all the station are selected and the data is returned from the last 24 hours. The data is returned as timevaluepair format.
 ### Parameters
@@ -667,7 +667,7 @@ Hourly air quality observations from weather stations of Finnish Meteorological 
 
 ## Lightning Strikes
 
-`__fmi::observations::lightning::multipointcoverage__`
+`fmi::observations::lightning::multipointcoverage`
 
 The response contains all detected lightning strikes in Finland. Observations are mainly ground flashes but some of cloud flashes are also detected.
 ### Parameters
@@ -686,7 +686,7 @@ The response contains all detected lightning strikes in Finland. Observations ar
 
 ## Lightning Strikes
 
-`__fmi::observations::lightning::simple__`
+`fmi::observations::lightning::simple`
 
 The response contains all detected lightning strikes in Finland. Observations are mainly ground flashes but some of cloud flashes are also detected.
 ### Parameters
@@ -705,7 +705,7 @@ The response contains all detected lightning strikes in Finland. Observations ar
 
 ## Mareograph Observations
 
-`__fmi::observations::mareograph::multipointcoverage__`
+`fmi::observations::mareograph::multipointcoverage`
 
 Water level observations from 13 locations. Time step is 60 minutes. The data is retuned in multi point coverage format.
 ### Parameters
@@ -725,7 +725,7 @@ Water level observations from 13 locations. Time step is 60 minutes. The data is
 
 ## Mareograph Observations
 
-`__fmi::observations::mareograph::simple__`
+`fmi::observations::mareograph::simple`
 
 Water level observations from 13 locations. Time step is 60 minutes. The data is retuned in simple feature format.
 ### Parameters
@@ -745,7 +745,7 @@ Water level observations from 13 locations. Time step is 60 minutes. The data is
 
 ## Mareograph Observations
 
-`__fmi::observations::mareograph::timevaluepair__`
+`fmi::observations::mareograph::timevaluepair`
 
 Water level observations from 13 locations. Time step is 60 minutes. The data is returned in time value pair format.
 ### Parameters
@@ -766,7 +766,7 @@ Water level observations from 13 locations. Time step is 60 minutes. The data is
 
 ## Sun Radiation Observations
 
-`__fmi::observations::radiation::multipointcoverage__`
+`fmi::observations::radiation::multipointcoverage`
 
 Sun radiation observations from weather stations. By default the data is returned from last 1 hour and from stations in Sodankylä, Jokioinen, Helsinki, Parainen, Vantaa, Jyväskylä, Sotkamo and Utsjoki. The data is returned in 'multipointcoverage' format.
 ### Parameters
@@ -787,7 +787,7 @@ Sun radiation observations from weather stations. By default the data is returne
 
 ## Sun Radiation Observations
 
-`__fmi::observations::radiation::simple__`
+`fmi::observations::radiation::simple`
 
 Sun radiation observations from weather stations. By default the data is returned from last 1 hour and from stations in Sodankylä, Jokioinen, Helsinki, Parainen, Vantaa, Jyväskylä, Sotkamo and Utsjoki. The data is returned in 'simple feature' format.
 ### Parameters
@@ -808,7 +808,7 @@ Sun radiation observations from weather stations. By default the data is returne
 
 ## Sun Radiation Observations
 
-`__fmi::observations::radiation::timevaluepair__`
+`fmi::observations::radiation::timevaluepair`
 
 Sun radiation observations from weather stations. By default the data is returned from last 1 hour and from stations in Sodankylä, Jokioinen, Helsinki, Parainen, Vantaa, Jyväskylä, Sotkamo and Utsjoki. The data is returned in 'timevaluepair' format.
 ### Parameters
@@ -830,7 +830,7 @@ Sun radiation observations from weather stations. By default the data is returne
 
 ## Hourly Soil Observations
 
-`__fmi::observations::soil::hourly::multipointcoverage__`
+`fmi::observations::soil::hourly::multipointcoverage`
 
 Hourly minimum, maximum and average soil values from weather stations. By default, the data is returned from last 12 hour.  At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned as multi point coverage format.
 ### Parameters
@@ -856,7 +856,7 @@ Hourly minimum, maximum and average soil values from weather stations. By defaul
 
 ## Hourly Soil Observations
 
-`__fmi::observations::soil::hourly::simple__`
+`fmi::observations::soil::hourly::simple`
 
 Hourly minimum, maximum and average soil values from weather stations. By default, the data is returned from last 12 hour.  At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned as simple feature format.
 ### Parameters
@@ -882,7 +882,7 @@ Hourly minimum, maximum and average soil values from weather stations. By defaul
 
 ## Hourly Soil Observations
 
-`__fmi::observations::soil::hourly::timevaluepair__`
+`fmi::observations::soil::hourly::timevaluepair`
 
 Hourly minimum, maximum and average soil values from weather stations. By default, the data is returned from last 12 hour.  At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned as a time value pair format.
 ### Parameters
@@ -908,7 +908,7 @@ Hourly minimum, maximum and average soil values from weather stations. By defaul
 
 ## Wave and Water temperature observations
 
-`__fmi::observations::wave::multipointcoverage__`
+`fmi::observations::wave::multipointcoverage`
 
 Wave and water temperature observations from buoys. Available parameters are significant wave height, wave direction, deviation of wave direction, modal period and water temperature. Some buoys return only temperature values. Time step is 30 minutes. The data is returned in multipointcoverage format.
 ### Parameters
@@ -928,7 +928,7 @@ Wave and water temperature observations from buoys. Available parameters are sig
 
 ## Wave and Water temperature observations
 
-`__fmi::observations::wave::simple__`
+`fmi::observations::wave::simple`
 
 Wave and water temperature observations from buoys. Available parameters are significant wave height, wave direction, deviation of wave direction, modal period and water temperature. Some buoys return only temperature values. Time step is 30 minutes. The data is returned in simple feature format.
 ### Parameters
@@ -948,7 +948,7 @@ Wave and water temperature observations from buoys. Available parameters are sig
 
 ## Wave and Water temperature observations
 
-`__fmi::observations::wave::timevaluepair__`
+`fmi::observations::wave::timevaluepair`
 
 Wave and water temperature observations from buoys. Available parameters are significant wave height, wave direction, deviation of wave direction, modal period and water temperature. Some buoys return only temperature values. Time step is 30 minutes. The data is returned in time value pair format.
 ### Parameters
@@ -969,7 +969,7 @@ Wave and water temperature observations from buoys. Available parameters are sig
 
 ## Weather observations for cities as multipointcoverage.
 
-`__fmi::observations::weather::cities::multipointcoverage__`
+`fmi::observations::weather::cities::multipointcoverage`
 
 Weather observations for cities in Finland as multipointcoverage.
 ### Parameters
@@ -987,7 +987,7 @@ Weather observations for cities in Finland as multipointcoverage.
 
 ## Weather observations for cities as simple feature.
 
-`__fmi::observations::weather::cities::simple__`
+`fmi::observations::weather::cities::simple`
 
 Weather observations for cities in Finland as simple feature.
 ### Parameters
@@ -1005,7 +1005,7 @@ Weather observations for cities in Finland as simple feature.
 
 ## Weather observations for cities as time value pairs.
 
-`__fmi::observations::weather::cities::timevaluepair__`
+`fmi::observations::weather::cities::timevaluepair`
 
 Weather observations for cities in Finland as time value pairs.
 ### Parameters
@@ -1024,7 +1024,7 @@ Weather observations for cities in Finland as time value pairs.
 
 ## Daily Weather Observations
 
-`__fmi::observations::weather::daily::multipointcoverage__`
+`fmi::observations::weather::daily::multipointcoverage`
 
 Daily weather observations from weather stations. Default set contains daily precipitation rate, mean temperature, snow depth, and minimum  and maximum temperature. By default, the data is returned from last 744 hours. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in multi point coverage format.
 ### Parameters
@@ -1049,7 +1049,7 @@ Daily weather observations from weather stations. Default set contains daily pre
 
 ## Daily Weather Observations
 
-`__fmi::observations::weather::daily::simple__`
+`fmi::observations::weather::daily::simple`
 
 Daily weather observations from weather stations. Default set contains daily precipitation rate, mean temperature, snow depth, and minimum  and maximum temperature. By default, the data is returned from last 744 hours. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in simple feature format.
 ### Parameters
@@ -1074,7 +1074,7 @@ Daily weather observations from weather stations. Default set contains daily pre
 
 ## Daily Weather Observations
 
-`__fmi::observations::weather::daily::timevaluepair__`
+`fmi::observations::weather::daily::timevaluepair`
 
 Daily weather observations from weather stations. Default set contains daily precipitation rate, mean temperature, snow depth, minimum temperature and maximum temperature. By default, the data is returned from last 744 hours. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned time value pair format.
 ### Parameters
@@ -1100,7 +1100,7 @@ Daily weather observations from weather stations. Default set contains daily pre
 
 ## Instantaneous profile observations from masts
 
-`__fmi::observations::weather::mast::multipointcoverage__`
+`fmi::observations::weather::mast::multipointcoverage`
 
 This stored query return instantaneous profile observations from masts in multipointcoverage format. By default latest observation of the available meteo paramters are returned in 10 minute resolution. At least one location has to be given.
 ### Parameters
@@ -1124,7 +1124,7 @@ This stored query return instantaneous profile observations from masts in multip
 
 ## Monthly weather observations of 30-year normal period
 
-`__fmi::observations::weather::monthly::30year::multipointcoverage__`
+`fmi::observations::weather::monthly::30year::multipointcoverage`
 
 Monthly Weather Observations of 30-year normal period. By default, the data is returned from the normal period of 1981 - 2010. There is available the following normal periods: 1971 - 2000, 1981 - 2010. Notice that there is only data at the begin of the period. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in multi point coverage format.
 ### Parameters
@@ -1150,7 +1150,7 @@ Monthly Weather Observations of 30-year normal period. By default, the data is r
 
 ## Monthly weather observations of 30-year normal period
 
-`__fmi::observations::weather::monthly::30year::simple__`
+`fmi::observations::weather::monthly::30year::simple`
 
 Monthly Weather Observations of 30-year normal period. By default, the data is returned from the normal period of 1981 - 2010. There is available the following normal periods: 1971 - 2000, 1981 - 2010. Notice that there is only data at the begin of the period. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in simple feature format.
 ### Parameters
@@ -1176,7 +1176,7 @@ Monthly Weather Observations of 30-year normal period. By default, the data is r
 
 ## Monthly weather observations of 30-year normal period
 
-`__fmi::observations::weather::monthly::30year::timevaluepair__`
+`fmi::observations::weather::monthly::30year::timevaluepair`
 
 Monthly Weather Observations of 30-year normal period. By default, the data is returned from the normal period of 1981 - 2010. There is available the following normal periods: 1971 - 2000, 1981 - 2010. Notice that there is only data at the begin of the period. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in time value pair format.
 ### Parameters
@@ -1202,7 +1202,7 @@ Monthly Weather Observations of 30-year normal period. By default, the data is r
 
 ## Monthly Weather Observations
 
-`__fmi::observations::weather::monthly::grid__`
+`fmi::observations::weather::monthly::grid`
 
 Monthly precipitation rate and mean temperature interpolated into a grid. The data is returned in GRIB format.
 ### Parameters
@@ -1220,7 +1220,7 @@ Monthly precipitation rate and mean temperature interpolated into a grid. The da
 
 ## Monthly Weather Observations
 
-`__fmi::observations::weather::monthly::multipointcoverage__`
+`fmi::observations::weather::monthly::multipointcoverage`
 
 Monthly weather observations from weather stations. Default set contains monthly precipitation rate, mean temperature. By default, the data is returned from last 12 months. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in multi point coverage format.
 ### Parameters
@@ -1245,7 +1245,7 @@ Monthly weather observations from weather stations. Default set contains monthly
 
 ## Monthly Weather Observations
 
-`__fmi::observations::weather::monthly::simple__`
+`fmi::observations::weather::monthly::simple`
 
 Monthly weather observations from weather stations. Default set contains monthly precipitation rate, mean temperature. By default, the data is returned from last 12 months. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in simple feature format.
 ### Parameters
@@ -1270,7 +1270,7 @@ Monthly weather observations from weather stations. Default set contains monthly
 
 ## Monthly Weather Observations
 
-`__fmi::observations::weather::monthly::timevaluepair__`
+`fmi::observations::weather::monthly::timevaluepair`
 
 Monthly weather observations from weather stations. Default set contains monthly precipitation rate, mean temperature. By default, the data is returned from last 12 months. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in time value pair format.
 ### Parameters
@@ -1296,7 +1296,7 @@ Monthly weather observations from weather stations. Default set contains monthly
 
 ## Instantaneous Weather Observations
 
-`__fmi::observations::weather::multipointcoverage__`
+`fmi::observations::weather::multipointcoverage`
 
 Real time weather observations from weather stations. Default set contains wind speed, direction, gust, temperature, relative humidity, dew point, pressure reduced to sea level, one hour precipitation amount, visibility and cloud cover. By default, the data is returned from last 12 hour. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned as a multi point coverage format.
 ### Parameters
@@ -1321,7 +1321,7 @@ Real time weather observations from weather stations. Default set contains wind 
 
 ## Instantaneous Weather Observations
 
-`__fmi::observations::weather::simple__`
+`fmi::observations::weather::simple`
 
 Real time weather observations from weather stations. Default set contains wind speed, direction, gust, temperature, relative humidity, dew point, pressure reduced to sea level, one hour precipitation amount, visibility and cloud cover. By default, the data is returned from last 12 hour. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned as a simple feature format.
 ### Parameters
@@ -1346,7 +1346,7 @@ Real time weather observations from weather stations. Default set contains wind 
 
 ## Instantaneous Weather Observations
 
-`__fmi::observations::weather::timevaluepair__`
+`fmi::observations::weather::timevaluepair`
 
 Real time weather observations from weather stations. Default set contains air temperatire, wind speed, gust speed, wind direction, relative humidity, dew point, one hour precipitation amount, precipitation intensity, snow depth, pressure reduced to sea level and visibility. By default, the data is returned from last 12 hour.  At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned as a time value pair format.
 ### Parameters
@@ -1372,7 +1372,7 @@ Real time weather observations from weather stations. Default set contains air t
 
 ## Yearly weather observations of 30-year normal period
 
-`__fmi::observations::weather::yearly::30year::multipointcoverage__`
+`fmi::observations::weather::yearly::30year::multipointcoverage`
 
 Yearly Weather Observations of 30-year normal period. By default, the data is returned from the normal period of 1981 - 2010. There is available the following normal periods: 1971 - 2000, 1981 - 2010. Notice that there is only data at the begin of the period. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in multi point coverage format.
 ### Parameters
@@ -1398,7 +1398,7 @@ Yearly Weather Observations of 30-year normal period. By default, the data is re
 
 ## Yearly weather observations of 30-year normal period
 
-`__fmi::observations::weather::yearly::30year::simple__`
+`fmi::observations::weather::yearly::30year::simple`
 
 Yearly Weather Observations of 30-year normal period. By default, the data is returned from the normal period of 1981 - 2010. There is available the following normal periods: 1971 - 2000, 1981 - 2010. Notice that there is only data at the begin of the period. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in simple feature format.
 ### Parameters
@@ -1424,7 +1424,7 @@ Yearly Weather Observations of 30-year normal period. By default, the data is re
 
 ## Yearly weather observations of 30-year normal period
 
-`__fmi::observations::weather::yearly::30year::timevaluepair__`
+`fmi::observations::weather::yearly::30year::timevaluepair`
 
 Yearly Weather Observations of 30-year normal period. By default, the data is returned from the normal period of 1981 - 2010. There is available the following normal periods: 1971 - 2000, 1981 - 2010. Notice that there is only data at the begin of the period. At least one location parameter (geoid/place/fmisid/wmo/bbox) has to be given. The data is returned in time value pair format.
 ### Parameters
@@ -1450,7 +1450,7 @@ Yearly Weather Observations of 30-year normal period. By default, the data is re
 
 ## Radar
 
-`__fmi::radar__`
+`fmi::radar`
 
 All available radar images during last hour.
 ### Parameters
@@ -1467,7 +1467,7 @@ All available radar images during last hour.
 
 ## Radar Reflectivity Composite
 
-`__fmi::radar::composite::dbz__`
+`fmi::radar::composite::dbz`
 
 Radar reflectivity (dbz) as composite covering Finland.
 ### Parameters
@@ -1484,7 +1484,7 @@ Radar reflectivity (dbz) as composite covering Finland.
 
 ## Precipitation Rate Composite
 
-`__fmi::radar::composite::rr__`
+`fmi::radar::composite::rr`
 
 Precipitation rate (rr) as composite covering Finland.
 ### Parameters
@@ -1501,7 +1501,7 @@ Precipitation rate (rr) as composite covering Finland.
 
 ## Precipitation Amount 12h Composite
 
-`__fmi::radar::composite::rr12h__`
+`fmi::radar::composite::rr12h`
 
 Precipitation amount of twelve hours (rr12h) as composite covering Finland.
 ### Parameters
@@ -1518,7 +1518,7 @@ Precipitation amount of twelve hours (rr12h) as composite covering Finland.
 
 ## Precipitation Amount 1h Composite
 
-`__fmi::radar::composite::rr1h__`
+`fmi::radar::composite::rr1h`
 
 Precipitation amount of one hour (rr1h) as composite covering Finland.
 ### Parameters
@@ -1535,7 +1535,7 @@ Precipitation amount of one hour (rr1h) as composite covering Finland.
 
 ## Precipitation Amount 24h Composite
 
-`__fmi::radar::composite::rr24h__`
+`fmi::radar::composite::rr24h`
 
 Precipitation amount of 24 hours (rr24h) as composite covering Finland.
 ### Parameters
@@ -1552,7 +1552,7 @@ Precipitation amount of 24 hours (rr24h) as composite covering Finland.
 
 ## Radar Reflectivity Single
 
-`__fmi::radar::single::dbz__`
+`fmi::radar::single::dbz`
 
 Radar reflectivity (dbz) from single radars.
 ### Parameters
@@ -1570,7 +1570,7 @@ Radar reflectivity (dbz) from single radars.
 
 ## Echo Top Single
 
-`__fmi::radar::single::etop_20__`
+`fmi::radar::single::etop_20`
 
 Echo top 20 (etop_20) from single radars.
 ### Parameters
@@ -1587,7 +1587,7 @@ Echo top 20 (etop_20) from single radars.
 
 ## Hydro Class Single
 
-`__fmi::radar::single::hclass__`
+`fmi::radar::single::hclass`
 
 Hydro class (hclass) from single radars.
 ### Parameters
@@ -1604,7 +1604,7 @@ Hydro class (hclass) from single radars.
 
 ## Doppler Speed Single
 
-`__fmi::radar::single::vrad__`
+`fmi::radar::single::vrad`
 
 Doppler speed (vrad) from single radars.
 ### Parameters
@@ -1621,7 +1621,7 @@ Doppler speed (vrad) from single radars.
 
 ## Surface level Hilatar model deposition data
 
-`__fmi::transportmodel::hilatar::surface::scandinavia::grid__`
+`fmi::transportmodel::hilatar::surface::scandinavia::grid`
 
 This Stored Query retrieve simulated surface level deposition of nitrogen and sulphur compounds in Scandinavia in units mg per m2 (S or N) in the selected time period. Data is available in NetCDF file format.
 ### Parameters
@@ -1639,7 +1639,7 @@ This Stored Query retrieve simulated surface level deposition of nitrogen and su
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::default::multipointcoverage__`
+`livi::observations::road::default::multipointcoverage`
 
 Real time road weather observations from road weather stations. By default, basic weather data is returned from last 20 minutes. At least one location parameter (geoid/place/fmisid/bbox) has to be given. The data is returned as a multi point coverage format.
 ### Parameters
@@ -1663,7 +1663,7 @@ Real time road weather observations from road weather stations. By default, basi
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::default::simple__`
+`livi::observations::road::default::simple`
 
 Real time road weather observations from road weather stations. By default, basic weather data is returned from last 20 minutes. At least one location parameter (geoid/place/fmisid/bbox) has to be given. The data is returned as a simple feature format.
 ### Parameters
@@ -1687,7 +1687,7 @@ Real time road weather observations from road weather stations. By default, basi
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::default::timevaluepair__`
+`livi::observations::road::default::timevaluepair`
 
 Real time road weather observations from road weather stations. By default, essential parameters are returned from last 20 minutes. At least one location parameter (geoid/place/fmisid/bbox) has to be given. The data is returned as a time value pair format.
 ### Parameters
@@ -1712,7 +1712,7 @@ Real time road weather observations from road weather stations. By default, esse
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::finland::multipointcoverage__`
+`livi::observations::road::finland::multipointcoverage`
 
 Real time road weather observations from road weather stations in Finland. By default, essential parameters are returned from last 20 minutes. The data is returned as a multi point coverage format.
 ### Parameters
@@ -1730,7 +1730,7 @@ Real time road weather observations from road weather stations in Finland. By de
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::finland::simple__`
+`livi::observations::road::finland::simple`
 
 Real time road weather observations from road weather stations in Finland. By default, essential parameters are returned from last 20 minutes. The data is returned as a simple feature format.
 ### Parameters
@@ -1748,7 +1748,7 @@ Real time road weather observations from road weather stations in Finland. By de
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::finland::timevaluepair__`
+`livi::observations::road::finland::timevaluepair`
 
 Real time road weather observations from road weather stations in Finland. By default, essential parameters are returned from last 20 minutes. The data is returned as a time value pair format.
 ### Parameters
@@ -1767,7 +1767,7 @@ Real time road weather observations from road weather stations in Finland. By de
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::multipointcoverage__`
+`livi::observations::road::multipointcoverage`
 
 Real time road weather observations from road weather stations. By default, the data is returned from last 12 hours. At least one location parameter (geoid/place/fmisid/bbox) has to be given. The data is returned as a multi point coverage format.
 ### Parameters
@@ -1791,7 +1791,7 @@ Real time road weather observations from road weather stations. By default, the 
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::simple__`
+`livi::observations::road::simple`
 
 Real time road weather observations from road weather stations. By default, the data is returned from last 12 hours. At least one location parameter (geoid/place/fmisid/bbox) has to be given. The data is returned as a simple feature format.
 ### Parameters
@@ -1815,7 +1815,7 @@ Real time road weather observations from road weather stations. By default, the 
 
 ## Instantaneous Road Weather Observations
 
-`__livi::observations::road::timevaluepair__`
+`livi::observations::road::timevaluepair`
 
 Real time road weather observations from road weather stations. By default, the data is returned from last 12 hours. At least one location parameter (geoid/place/fmisid/bbox) has to be given. The data is returned as a time value pair format.
 ### Parameters
@@ -1840,7 +1840,7 @@ Real time road weather observations from road weather stations. By default, the 
 
 ## Radioactivity in outdoor air
 
-`__stuk::observations::air::radionuclide-activity-concentration::latest::multipointcoverage__`
+`stuk::observations::air::radionuclide-activity-concentration::latest::multipointcoverage`
 
 This stored query returns only the latest results of the measurement of the radioactivity samples collected by special equipment. At monitoring station samples are created by pumping high volumes of air through glass fibre filter. In Finland there are 8 monitoring stations. By default all the monitoring stations are selected and the latest results of measurements are search from the last 720 hours. The default values can be overwritten by using the time and location related input parameters.
 ### Parameters
@@ -1862,7 +1862,7 @@ This stored query returns only the latest results of the measurement of the radi
 
 ## Radioactivity in outdoor air
 
-`__stuk::observations::air::radionuclide-activity-concentration::latest::simple__`
+`stuk::observations::air::radionuclide-activity-concentration::latest::simple`
 
 This stored query return only the latest results of measurement of radioactivity samples collected by special equipment that filtering outdoor air in the monitoring stations in Finland. By default all the monitoring stations are selected and the latest results of measurements are search from the last 720 hours. The default values can be overwritten by using the time and location related input parameters. Notice that a result member contains the coordinates of a monitoring station, the endtime of sample collection period, a nuclide code and measured activity concentration.
 ### Parameters
@@ -1885,7 +1885,7 @@ This stored query return only the latest results of measurement of radioactivity
 
 ## Radioactivity in outdoor air
 
-`__stuk::observations::air::radionuclide-activity-concentration::multipointcoverage__`
+`stuk::observations::air::radionuclide-activity-concentration::multipointcoverage`
 
 This stored query returns the results of the measurement of the radioactivity samples collected by special equipment. At monitoring station samples are created by pumping high volumes of air through glass fibre filter. In Finland there are 8 monitoring stations. By default all the monitoring stations are selected and the results of measurements are search from the last 720 hours. The default values can be overwritten by using the time and location related input parameters.
 ### Parameters
@@ -1907,7 +1907,7 @@ This stored query returns the results of the measurement of the radioactivity sa
 
 ## Latest dose rate of external radiation in Finland
 
-`__stuk::observations::external-radiation::latest::multipointcoverage__`
+`stuk::observations::external-radiation::latest::multipointcoverage`
 
 This stored query return the latest results of the external dose rate measured by the automatic dose rate monitoring stations in Finland. The automatic dose rate monitoring network have about 255 monitoring stations distributed evenly around the Finland.  The monitoring network is maintained by Radiation and Nuclear Safety Authority (STUK). By default, the latest data is searched from the last 24 hours. The data is returned as a multipointcoverage format. The default values can be overwritten by using the time and location related input parameters.
 ### Parameters
@@ -1929,7 +1929,7 @@ This stored query return the latest results of the external dose rate measured b
 
 ## Latest dose rate of external radiation in Finland
 
-`__stuk::observations::external-radiation::latest::simple__`
+`stuk::observations::external-radiation::latest::simple`
 
 This stored query return the latest dose rate of external radiation in Finland. The dose rate of external radiation is measured by an automatic external-dose rate-monitoring network maintained by Radiation and Nuclear Safety Authority (STUK) and local rescue services. The network comprises about 255 stations. By default, the latest data is searched from the last 24 hours. The data is returned as a simple format.
 ### Parameters
@@ -1952,7 +1952,7 @@ This stored query return the latest dose rate of external radiation in Finland. 
 
 ## Dose rate of external radiation in Finland
 
-`__stuk::observations::external-radiation::multipointcoverage__`
+`stuk::observations::external-radiation::multipointcoverage`
 
 This stored query return the results of the external dose rate measured by the automatic dose rate monitoring stations in Finland. The automatic dose rate monitoring network have about 255 monitoring stations distributed evenly around the Finland.  The monitoring network is maintained by Radiation and Nuclear Safety Authority (STUK). By default, the data is returned from the last 2 hours. The data is returned as a multipointcoverage format. The default values can be overwritten by using the time and location related input parameters.
 ### Parameters
@@ -1975,7 +1975,7 @@ This stored query return the results of the external dose rate measured by the a
 
 ## Hourly Air Quality Observations
 
-`__urban::observations::airquality::hourly::multipointcoverage__`
+`urban::observations::airquality::hourly::multipointcoverage`
 
 Hourly air quality observations from Finnish municipalities. By default, all the station are selected and the data is returned from the last 24 hours. The data is returned as multi point coverage format.
 ### Parameters
@@ -1999,7 +1999,7 @@ Hourly air quality observations from Finnish municipalities. By default, all the
 
 ## Hourly Air Quality Observations
 
-`__urban::observations::airquality::hourly::simple__`
+`urban::observations::airquality::hourly::simple`
 
 Hourly air quality observations from Finnish municipalities. By default, all the station are selected and the data is returned from the last 24 hours. The data is returned as a simple feature format.
 ### Parameters
@@ -2024,7 +2024,7 @@ Hourly air quality observations from Finnish municipalities. By default, all the
 
 ## Hourly Air Quality Observations
 
-`__urban::observations::airquality::hourly::timevaluepair__`
+`urban::observations::airquality::hourly::timevaluepair`
 
 Hourly air quality observations from Finnish municipalities. By default, all the station are selected and the data is returned from the last 24 hours. The data is returned as timevaluepair format.
 ### Parameters
@@ -2049,7 +2049,7 @@ Hourly air quality observations from Finnish municipalities. By default, all the
 
 ## GetFeatureById
 
-`__urn:ogc:def:query:OGC-WFS::GetFeatureById__`
+`urn:ogc:def:query:OGC-WFS::GetFeatureById`
 
 The GetFeatureById stored query is mandatory by WFS 2.0 spec.    In the FMI case it's mostly useless however, because most of the    features only have temporary IDs that are generated on-the-fly    during the response generation, and thus cannot be used as permanent    identifiers for those features
 ### Parameters
