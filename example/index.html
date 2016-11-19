@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js'></script>
+  </head>
+  <body>
+    <h1><%= place %></h1>
+    <div id='forecast-graph'></div>
+    <div id='observation-graph'></div>
+    <script type='text/javascript'>
+      var draw = function(elementId, data) {
+
+          // set the dimensions and margins of the graph
+        var margin = {top: 20, right: 20, bottom: 30, left: 150},
+          width = 1660 - margin.left - margin.right,
+          height = 650 - margin.top - margin.bottom;
+        // append the svg obgect to the body of the page
+        // appends a 'group' element to 'svg'
+        // moves the 'group' element to the top left margin
+        var svg = d3.select('#' + elementId).append('svg')
+          .attr('width', width + margin.left + margin.right)
+          .attr('height', height + margin.top + margin.bottom)
+          .append('g')
+          .attr('transform',
+            'translate(' + margin.left + ',' + margin.top + ')');
+
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        // set the ranges
+        const x = d3.scaleTime().range([0, width]);
+        const y = d3.scaleLinear().range([height, 0]);
+
+        const timeStamps = [];
+
+        // format the data
+        data = _.map(data, value => {
+          value.time = d3.isoParse(value.time);
+          timeStamps.push(value.time);
+          return value;
+        });
+        // Scale the range of the data
+        x.domain(d3.extent(data, d => d.time));
+
+        const weatherParams = _.without(Object.keys(data[0]), 'time');
+
+        // Reformat data to object with data arrays
+        const dataObjects = weatherParams.map(param => ({
+            name: param,
+            data: data.map(dataPoint => parseFloat(dataPoint[param]))
+          }));
+
+        // Add the X Axis
+        svg.append('g')
+          .attr('transform', 'translate(0,' + height + ')')
+          .attr('class', 'x-axis')
+          .call(d3.axisBottom(x));
+
+        dataObjects.forEach((weatherParam, paramIndex) => {
+          // define the line
+          const line = d3.line()
+            .x((d, i) => {
+              return x(timeStamps[i]);
+            })
+            .y(d => {
+              return y(d);
+            });
+
+          const paramMin = d3.min(weatherParam.data);
+          const paramMax = d3.max(weatherParam.data);
+          const paramMargin = (paramMax - paramMin) * 0.1;
+
+          y.domain([
+            paramMin - paramMargin,
+            paramMax + paramMargin
+          ]);
+
+          // Add the Temperatureline path.
+          svg.append('path')
+            .data([weatherParam.data])
+            .attr('class', weatherParam.name + '-line')
+            .attr('fill', 'none')
+            .attr('stroke', color)
+            .attr('d', line);
+
+          // Add the Y Axis
+          svg.append('g')
+            .attr('class', 'y-axis-temperature')
+            .attr('transform', 'translate(-' + paramIndex * 50 + ', 0)')
+            .attr('stroke', color)
+            .call(d3.axisLeft(y));
+        });
+      };
+
+      var updateUI = function() {
+        function forecastReqListener() {
+          draw('forecast-graph', JSON.parse(this.responseText));
+        }
+        function observationReqListener() {
+          draw('observation-graph', JSON.parse(this.responseText));
+        }
+        var forecastReq = new XMLHttpRequest();
+        forecastReq.addEventListener('load', forecastReqListener);
+        forecastReq.open('GET', '/forecast/<%= place %>');
+        forecastReq.send();
+
+        var observationReq = new XMLHttpRequest();
+        observationReq.addEventListener('load', observationReqListener);
+        observationReq.open('GET', '/observation/<%= place %>');
+        observationReq.send();
+      };
+      updateUI();
+    </script>
+  </body>
+</html>
