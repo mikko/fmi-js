@@ -1,7 +1,7 @@
-const listStoredQueries = require('./query/listStoredQueries');
+const simpleForecast = require('./query/simpleForecast');
+const latestObservations = require('./query/latestObservations');
 
-listStoredQueries.run()
-  .then((res) => {
-    listStoredQueries.renderMarkdown(res);
-  });
-
+module.exports = {
+	simpleForecast: simpleForecast.run,
+	latestObservations: latestObservations.run
+};
