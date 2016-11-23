@@ -13,13 +13,11 @@ exports.run = function runQuery() {
       const storedQueries = results[xmlFirstLevel][xmlSecondLevel].map((xmlDesc) => {
         const rawAbstract = xmlDesc.Abstract[0];
         const abstract = typeof rawAbstract === 'string' ? rawAbstract.replace(/(\r\n|\n|\r)/gm, '').trim() : '';
-        console.log(typeof rawAbstract, JSON.stringify(rawAbstract, null, 2));
         return {
           title: xmlDesc.Title,
           queryId: xmlDesc.$.id,
           abstract,
           parameters: xmlDesc.Parameter.map((param) => {
-            console.dir(param);
             const rawParamAbstract = param.Abstract[0];
             const paramAbstract = typeof rawParamAbstract === 'string' ? rawParamAbstract.replace(/(\r\n|\n|\r)/gm, '').trim() : '';
             return {
