@@ -1,15 +1,7 @@
-"use strict";
-
-const fileConfig = require('./config.json');
-
-let apiKey = process.env.FMI_APIKEY;
-
-if (apiKey === undefined && fileConfig.apiKey !== undefined) {
-  apiKey = fileConfig.apiKey;
-}
+const apiKey = process.env.FMI_APIKEY;
 
 if (typeof apiKey !== 'string') {
-  throw new Error('Missing fmi apikey. Api key can be given as environment variable FMI_APIKEY or in config.json');
+  throw new Error('Missing fmi apikey. Api key can be given as environment variable FMI_APIKEY');
 }
 
 exports.apiKey = apiKey;
