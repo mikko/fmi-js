@@ -39,4 +39,5 @@ jspm_packages
 config.json
 .idea
 *.iml
+.env
 
