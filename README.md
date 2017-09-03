@@ -4,7 +4,7 @@ Simple utility for fetching weather data in JSON format using FMI open data
 ## Usage
 
 1. Get api token for FMI
-1. Save api token in config.json `{ "apiKey": "abcde" }` or environment variable `FMI_APIKEY`
+1. Save api token in environment variable `FMI_APIKEY`
 1. `npm start`
 
 ## Available queries
